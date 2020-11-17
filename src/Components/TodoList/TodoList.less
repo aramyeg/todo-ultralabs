@@ -1,5 +1,54 @@
-.TodoList__section{
+.TodoList{
 
-  background-color: purple;
+  &__section{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #F1B24A;
+    color: white;
+    width: 550px;
+    margin-top: 2px;
+    padding: 5px 15px;
+    animation: fadeInRight 1s;
 
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__item{
+    padding: 5px 0px;
+    justify-content: space-between;
+    border: 1px solid #164A41;
+    display: flex;
+    background-color: #4D774E;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  &__status{
+    padding: 0px 10px;
+    margin-left: 5px;
+    background-color: #F1B24A;
+
+    &--completed{
+      background-color: #9DC88D;
+    }
+  }
+
+  &__description{
+    padding: 0px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+  }
 }

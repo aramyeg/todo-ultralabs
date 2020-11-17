@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import TodoList from "./TodoList/TodoList";
-import UserList from "./UserList/UserList";import "./App.css";
+import UserList from "./UserList/UserList";
+import "./App.less";
 
 function App() {
 
@@ -11,8 +12,8 @@ function App() {
   };
 
   return (
-    <div className='App--wrapper'>
-      <UserList openTodo={openTodo}/>
+    <div className='App'>
+      <UserList userId={userClicked.userId} openTodo={openTodo}/>
       {
         userClicked.firstName &&
         <TodoList user={userClicked} />

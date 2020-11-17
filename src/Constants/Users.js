@@ -53,5 +53,118 @@ export const USERS = [
     lastName : "Bell",
     completionRate : '14',
     todoList : [],
-  }
+  },
+  {
+    userId: 4,
+    firstName : "Walter",
+    lastName : "Bishop",
+    completionRate : '21',
+    todoList : [
+      {
+        todoId : 1,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 2,
+        description : "Open portal to the parallel universe",
+        complete : false
+      }
+    ],
+  },
+  {
+    userId: 5,
+    firstName : "Davit Robert",
+    lastName : "Jones",
+    completionRate : '27',
+    todoList : [
+      {
+        todoId : 1,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 2,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 3,
+        description : "Done portal ",
+        complete : true
+      }
+    ],
+  },
+  {
+    userId: 6,
+    firstName : "Phillip",
+    lastName : "Broyles",
+    completionRate : '100',
+    todoList : [
+      {
+        todoId : 1,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 2,
+        description : "Open portal to the parallel universe",
+        complete : false
+      }
+    ],
+  },
+  {
+    userId: 7,
+    firstName : "Nina",
+    lastName : "Sharp",
+    completionRate : '94',
+    todoList : [
+      {
+        todoId : 1,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 2,
+        description : "Open portal to the parallel universe",
+        complete : true
+      }
+    ],
+  },
+  {
+    userId: 8,
+    firstName : "Charlie",
+    lastName : "Franklin",
+    completionRate : '35',
+    todoList : [
+      {
+        todoId : 1,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 2,
+        description : "Open portal to the parallel universe",
+        complete : false
+      }
+    ],
+  },
+  {
+    userId: 9,
+    firstName : "Astrid",
+    lastName : "Farnsworth",
+    completionRate : '27',
+    todoList : [
+      {
+        todoId : 1,
+        description : "Open portal to the parallel universe",
+        complete : false
+      },
+      {
+        todoId : 2,
+        description : "Open portal to the parallel universe",
+        complete : false
+      }
+    ],
+  },
 ];

@@ -1,10 +1,15 @@
 import React from "react";
 import {USERS} from "../../Constants/Users";
+import "./UserList.less";
 
-function User({userData, openTodo, ...props}) {
+function User({userData, openTodo, userId, ...props}) {
+
   return (
     <>
-      <tr onClick={()=>openTodo(userData)}>
+      <tr className={`UserList__row ${ userId === userData.userId ? "UserList__row--opened" : ""}`}
+          onClick={()=>{
+            openTodo(userData)
+          }}>
         <td>{userData.firstName + " " + userData.lastName}</td>
         <td>{userData.completionRate}</td>
       </tr>
@@ -12,19 +17,19 @@ function User({userData, openTodo, ...props}) {
   );
 }
 
-function UserList({openTodo, ...props}) {
+function UserList({openTodo, userId, ...props}) {
 
   return (
-    <table>
-      <thead>
+    <table className={"UserList"}>
+      <thead className={"UserList__header"}>
         <tr>
           <td>Name</td>
           <td>Completion rate (%)</td>
         </tr>
       </thead>
-      <tbody>
+      <tbody className={"UserList__body"}>
         {USERS.map((user, ind) => (
-          <User openTodo={openTodo} key={ind} userData={user} />
+          <User userId={userId} openTodo={openTodo} key={ind} userData={user} />
         ))}
       </tbody>
     </table>

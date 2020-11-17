@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "./AddTodo.less";
 
 function AddTodo({handleTodoCreate, ...props}){
 
@@ -17,13 +18,13 @@ function AddTodo({handleTodoCreate, ...props}){
   }
 
   return(
-    <form className='AddTodo__form' onSubmit={handleSubmit}>
-      <input name='text'
-             placeholder='Enter Todo'
+    <form className='AddTodo' onSubmit={handleSubmit}>
+      <input className={"AddTodo__input"} name='text'
+             placeholder='New to-do description'
              onChange={handleChange}
              value={text}
       />
-      <button onClick={handleSubmit}>Add</button>
+      <button className={"AddTodo__btn"} onClick={handleSubmit}>Add</button>
     </form>
   )
 }

@@ -14,6 +14,7 @@ function TodoList({user, ...props}) {
 
   const handleTodoCreate = (text) => {
     const newTodo = {
+      todoId : todoState.length + 1,
       description : text,
       complete : false
     };
@@ -30,7 +31,10 @@ function TodoList({user, ...props}) {
   const todoList = [...todoState].sort(sortByCompletion).map((todo, ind)=>{
     return(
       <div className="TodoList__item" key={ind}>
-        <span className="TodoList__status">{todo.complete ? "Completed" : "Incomplete"}</span>
+        <span className={`TodoList__status ${
+          todo.complete? "TodoList__status--completed" : ""}`}>
+          {todo.complete ? "Completed" : "Incomplete"}
+        </span>
         <span className="TodoList__description">{todo.description}</span>
         {
           !todo.complete &&
